@@ -1,0 +1,157 @@
+“The act of describing a program in unambiguous detail and the act of programming are one and the same.” — Kevlin Henney
+“Much of the essence of building a program is in fact the debugging of the specification.” — Fred Brooks
+“A common fallacy is to assume authors of incomprehensible code will be able to express themselves clearly in comments.” — Kevlin Henney
+“Bad programmers worry about the code. Good programmers worry about data structures and their relationships.” — Linus Torvalds
+“Give someone a program, you frustrate them for a day; teach them how to program, you frustrate them for a lifetime.” — David Leinweber
+“Debugging is like being the detective in a crime movie where you are also the murderer.” — @fortes
+– What do we want? – Now! – When do we want it? – Fewer race conditions! -- @wellendonner
+“Dynamic typing: The belief that you can’t explain to a computer why your code works, but you can keep track of it all in your head.” — @chris__martin
+“Unix will give you enough rope to shoot yourself in the foot. If you didn’t think rope would do that, you should have read the man page.” — @mhoye
+“If you put a million monkeys on a million keyboards, one of them will eventually write a Java program. The rest of them will write Perl programs.”
+“When your hammer is C++, everything begins to look like a thumb.” — Steve Haflich
+“C is memory with syntactic sugar.” — Dennis Kubes
+“A distributed system is one in which the failure of a computer you didn’t even know existed can render your own computer unusable.” — Leslie Lamport
+“Sufficiently advanced abstractions are indistinguishable from obfuscation.” — @raganwald
+“Sufficiently advanced trolling is indistinguishable from thought leadership.” — Hall’s Law
+“Any sufficiently advanced bug is indistinguishable from a feature” — R. Kulawiec
+“Any sufficiently advanced incompetence is indistinguishable from malice” — Grey’s Law
+“Should array indices start at 0 or 1? My compromise of 0.5 was rejected without, I thought, proper consideration.” — Stan Kelly-Bootle
+“An estimate is the most optimistic prediction that has a non-zero probability of coming true” . . . Accepting this definition leads irrevocably toward a method called what’s-the-earliest-date-by-which-you-can’t-prove-you-won’t-be-finished estimating. Tom DeMarco (1982)
+The trouble with programmers is that you can never tell what a programmer is doing until it’s too late. ― Seymour Cray
+There are two ways to write error-free programs; only the third works. ― Alan J. Perlis
+If at first you don’t succeed, call it version 1.0. ― Unknown
+The last good thing written in C was Franz Schubert’s Symphony number 9. ― Michael Hodous
+Be careful about using the following code — I’ve only proven that it works, I haven’t tested it. ― Donald Knuth
+The first 90% of the code accounts for the first 90% of the development time. The remaining 10% of the code accounts for the other 90% of the development time. ― Tom Cargill
+Goto, n.: A programming tool that exists to allow structured programmers to complain about unstructured programmers. ― Ray Simard
+Real programmers don’t document. If it was hard to write, it should be hard to understand. ― Unknown
+A good programmer is someone who looks both ways before crossing a one-way street. ― Doug Linder
+Real Programmers use C since it’s the easiest language to spell. ― Unknown
+If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilisation. ― Gerald Weinberg
+Programmers don’t die. They just GoSub Without Return. ― Unknown
+Beware of programmers who carry screwdrivers. ― Leonard Brandwein
+The only thing more frightening than a programmer with a screwdriver or a hardware engineer with a program is a user with a pair of wire cutters and the root password. ― Elizabeth Zwicky
+Programming is like pinball. The reward for doing it is the opportunity of doing it again. ― Unknown
+See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard, too. ― Linus Torvalds
+It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free. ― Steve McConnell
+Intel Inside… The World’s Most Widely Used Warning Label. ― K. Senical
+Documentation is like sex: when it is good, it is very, very good; and when it is bad, it is better than nothing. ― Dick Brandon
+The best performance improvement is the transition from the nonworking state to the working state. ― John Ousterhout
+One computer is a problem. A computer network is a large problem. The internet is the world’s largest problem. ― Douglas Warren
+The most likely way for the world to be destroyed, most experts agree, is by accident. That’s where we come in; we’re computer professionals. We cause accidents. ― Nathaniel Borenstein
+You’ve heard about the computer programmer that died while washing his hair in the shower. The instructions said, ‘Lather, rinse, repeat.’ ― Unknown
+Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.*― Rich Cook
+C makes it easy to shoot yourself in the foot. C++ makes it harder, but when you do, it blows away your whole leg. ― Bjarne ‘Stumpy’ Stroustrup
+Programming is like sex, one mistake and you have to support it for the rest of your life. ― Michael Sinz
+That’s what’s cool about working with computers. They don’t argue, they remember everything and they don’t drink all your beer. ― Paul Leary
+For every complex problem there is an answer that is clear, simple, and wrong. ― H L Mencken
+There has never been an unexpectedly short debugging period in the history of computers. ― Steven Levy
+I have lots more; not all programming related per-
+For every complex problem there is an answer that is clear, simple, and wrong. ― H L Mencken
+It doesn’t make sense to hire smart people and tell them what to do; we hire smart people so they can tell us what to do. (Steve Jobs)
+The most important thing in communication is to hear what isn’t being said. (Peter Drucker)
+Software developers have more definitions of Done than Eskimos have definitions of snow. (@jurgenappelo)
+Führung ist zu wichtig, um sie nur Führungskräften zu überlassen. (Bernd Oestereich)
+Management is doing things right; leadership is doing the right things. (Peter Drucker)
+One of the best ways to develop morals and to increase interest in work is the logical delegation of responsibility. (Cyril Northcote Parkinson)
+The manager’s function is not to make people work, but to make it possible for people to work. (Tom DeMarco)
+If everything is under control, you’re not going fast enough. (Mario Andretti)
+Probleme kann man niemals mit derselben Denkweise lösen, durch die sie entstanden sind. (Albert Einstein)
+Don’t Panic. (Douglas Adams)
+Werte kann man nicht lehren, sondern nur vorleben. (Viktor Frankl)
+I don’t believe in magic. I believe in hard work. (Richie McCaw, All Blacks Captain)
+You can’t have great software without a great team, and most software teams behave like dysfunctional families. (Jim McCarthy)
+Learning is limited by an organization’s ability to keep its people. (Tom DeMarco)
+Vertrauen ist das Kreditwesen der Kommunikation. (Gerhard Wohland)
+Die Illusion, man habe die Vergangenheit verstanden, füttert den Irrglauben, man könne die Zukunft vorhersagen und kontrollieren. (Daniel Kahnemann)
+Wenn Du wenig Zeit hast, dann nimm Dir am Anfang viel davon. (Ruth Cohn)
+Viele verfolgen hartnäckig den Weg, den sie gewählt haben, aber nur wenige das Ziel. (Friedrich Nietzsche)
+We don’t need an accurate document, we need a shared understanding. (Jeff Patton)
+Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth. (Marcus Aurelius)
+Start with why. (Simon Sinek)
+Program testing can be used to show the presence of bugs, but never to show their absence. (Edsger Dijkstra)
+Design without code is just a daydream. Code without design is a nightmare. (Assaad Chalhoub, Infered from a japanese proverb)
+It’s not the plan that matters, it´s the planning. (Dr. Graeme Edwards)
+Projects without clear goals will not achieve their goal clearly. (Tom Gilb)
+Fast, fat computers breed slow, lazy programmers. (Robert Hummel)
+The only way to stop bugs is to kill the tester. (Assaad Chalhoub)
+A program is never less than 90% complete, and never more than 95% complete. (Terry Baker)
+The cheapest, fastest and most reliable components of a computer system are those that aren’t there. (Gordon Bell)
+There is no silver bullet. (Frederick P. Brooks)
+You can’t control what you can’t measure. (Tom DeMarco)
+When to use iterative development? You should use iterative development only on projects that you want to succeed. (Martin Fowler)
+Measuring programming progress by lines of code is like measuring aircraft building progress by weight. (Bill Gates)
+It is better to be vaguely right than exactly wrong. (Carveth Read)
+Culture eats strategy for breakfast. (Peter Drucker)
+Correctness is clearly the prime quality. If a system does not do what it is supposed to do, then everything else about it matters little. (Bertrand Meyer)
+Das Problem zu erkennen ist wichtiger als die Lösung zu erkennen, denn die genaue Darstellung des Problems führt zur Lösung. (Albert Einstein)
+No one’s life has yet been simplified by a computer. (Ted Nelson)
+If you think good architecture is expensive, try bad architecture. (Brian Foote)
+If the date is missed, the schedule was wrong. It doesn’t matter why the date was missed. The purpose of the schedule was planning, not goal-setting. (DeMarco / Lister)
+I have always wished for my computer to be as easy to use as my telephone; my wish has come true because I can no longer figure out how to use my telephone. (Bjarne Stroustrup)
+If it is not written down, it does not exist. (Philippe Kruchten)
+The bearing of a child takes nine months, no matter how many women are assigned. (Frederick P. Brooks Jr.)
+The first 90 percent of the code accounts for the first 90 percent of the development time…The remaining 10 percent of the code accounts for the other 90 percent of the development time. (Tom Cargill)
+Testing leads to failure, and failure leads to understanding. (Burt Rutan)
+One of my most productive days was throwing away 1000 lines of code. (Ken Thompson)
+The major problems of systems work are not so much technological as sociological. (Tom DeMarco)
+There are two ways to write error-free programs; only the third one works. (Alan J. Perlis)
+To err is human but to really foul up requires a computer. (Dan Rather)
+Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to to, let us concentrate rather on explaining to human beings what we want a computer to do. (Donald Knuth)
+It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free. (Steve McConnell)
+Costs will migrate out of any activity that is measured more carefully than its neighboring activities. (Tom DeMarco)
+No matter what the problem is, it’s always a people problem. (Gerald M. Weinberg)
+Without requirements or design, programming is the art of adding bugs to an empty text file. (Louis Srygley)
+The best predictor of how much work a knowledge worker will accomplish is not the hours that he or she spends, but the days. The twelve-hour days don’t accomplish any more than the eight-hour days. Overtime is a wash. (Tom DeMarco)
+The best thing about R is that it is written by statisticians. The worst thing about R is that it is written by statisticians. (Bow Cowgill)
+It is always wise to look ahead, but difficult to look further than you can see. (Winston Churchill)
+The greatest danger in times of turbulence is not the turbulence, it is to act with yesterday’s logic. (Peter F. Drucker)
+Essentially, all models are wrong, but some are useful. (George E. P. Box)
+I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail. (Abraham H. Maslow)
+However beautiful the strategy, you should occasionally look at the results. (Winston Churchill)
+Give me six hours to chop down a tree and I will spend the first four sharpening the axe. (Abraham Lincoln)
+If you don’t know where you’re going, you’re unlikely to end up there. (Forrest Gump)
+If you don’t actively attack the risks, the risks will actively attack you. (Tom Gilb)
+The business of software building isn’t really high-tech at all. It’s most of all a business of talking to each other and writing things down. Those who were making major contributions to the field were more likely to be its best communicators than its best technicians. (Tom DeMarco)
+It isn’t the mountains ahead to climb that wear you out; it’s the pebble in your shoe. (Muhammad Ali)
+The ultimate management sin is wasting people’s time. (DeMarco / Lister)
+Conway’s Law: Any organization that designs a system (…) will inevitably produce a design whose structure is a copy of the organization’s communication structure.
+The pathology of setting a deadline to the earliest articulable date essentially guarantees that the schedule will be missed. (Tom DeMarco)
+Focus is a matter of deciding what things you’re not going to do. (John Carmack)
+It ain’t what you don’t know that gets you into trouble. It’s what you know for sure that just ain’t so. (Mark Twain)
+It’s not what you don’t know that kills you but what you know that isn’t so. (Tom DeMarco)
+It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all. (Peter F. Drucker)
+The early bird may get the worm, but its the second mouse that gets the cheese. (Jeremy Paxman)
+There are three kinds of lies: lies, damn lies and statistics. (Leonard Henry Courtney)
+All projects are iterative – it’s just that some people choose to have the iterations after final delivery. (Author Unknown)
+The purpose of analysis is not modeling but understanding. (Sun Tsu)
+The only way for errors to occur in a program is by being put there by the author. No other mechanisms are known. Programs can’t acquire bugs by sitting around with other buggy programs. (Harlan Mills)
+It is far better to improve the effectiveness of testing first than to improve the efficiency of poor testing. Automating chaos just gives faster chaos. (Mark Fewster)
+If debugging is the process of removing bugs, then programming must be the process of putting them in. (Author Unknown, Edsger Dijkstra?)
+Facts do not cease to exist because they are ignored. (Aldous Huxley)
+In theory, theory and practice are the same. In practice, they are not. (Albert Einstein oder Yogi Berra)
+It is difficult to get a man to understand something, when his salary depends on his not understanding it. (Upton Sinclair)
+Computer system analysis is like child-rearing: you can do grievous damage, but you cannot ensure success. (Tom DeMarco)
+There are a million ways to lose a work day, but not even a single way to get one back. (Tom DeMarco)
+A goal without a plan is just a wish. (Antoine de SaintExupéry)
+Most of the time, multitasking is an illusion. You think you are multitasking, but in reality you’re actually wasting time switching from one task to another. (Bosco Tjan)
+The hardest part of design … is keeping features out. (Donald Norman)
+Testing is an infinite process of comparing the invisible to the ambiguous in order to avoid the unthinkable happening to the anonymous. (James Bach)
+If you don’t care about quality, you can meet any other requirement. (Gerald M. Weinberg)
+For a long time it puzzled me how something so expensive, so leading edge, could be so useless. And then it occurred to me that a computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match. (Bill Bryson)
+Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. (Martin Golding)
+It has been said that the great scientific disciplines are examples of giants standing on the shoulders of other giants. It has also been said that the software industry is an example of midgets standing on the toes of other midgets. (Alan Cooper)
+I love deadlines. I like the whooshing sound they make as they fly by. (Douglas Adam)
+Hofstadter’s Law: It always takes longer than you expect, even when you take Hofstadter’s Law into account. (Douglas Hofstadter)
+Static types give me the same feeling of safety as the announcement that my seat cushion can be used as a floatation device. (Don Roberts)
+Complex non-solutions to simple non-problems (pamphlet against X11 cited by The Unix Haters Handbook)
+We were on time for fourth quarter delivery as planned, since we shipped it on December 47th (HP internal memo)
+Can’t cast a void type to type void. Why not? Because the language spec says so, that’s why (MPW compiler error message, from memory)
+Premature optimization is the root of all evil (Don Knuth?)
+Belated pessimization is the leaf of no good (Len Lattanzi)
+I learned over time that if what this guy is saying seems completely idiotic and I think he’s far out in left field, it really means he’s two miles ahead of me and running fast. (Jonathan Ross)
+This code works perfectly well as long as values of 2 are sufficiently high (Baptiste Soulisse)
+This code is so elegantly stupid I wish it was also not so harmful that we have to nuke it. (Christophe Seyve?)
+This loop is not infinite, technically, since the end of the universe may terminate it. But it will last at least as long as your program (Christophe Seyve?)
+Instead of having idiots designing programming languages for experts, I wish we had experts designing programming languages for idiots (probably Jason Merril or Matt Austern, from memory)
+C and C++ are not programming language names, they are grades (don’t remember who)
