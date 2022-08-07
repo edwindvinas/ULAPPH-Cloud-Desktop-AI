@@ -35,6 +35,9 @@ var ouc = kvp.ottoUserContext;
  * PROCESSING LOGIC 
  */
 var str = input;
+if (str == "news") {
+	str = "news latest"
+}
 writeLog("str: " + str);
 defNews = str.indexOf("news ");
 var numResult = 10;
@@ -46,8 +49,9 @@ if (str == "news") {
 
 } else if (defNews >= 0) {
     var res = str.split("news ");
-    var word = res[res.length - 1];
-    writeLog("word: " + word);
+    //var word = res[res.length - 1];
+    var word = res[1];
+	writeLog("word: " + word);
     if (word == undefined || word == "undefined") {
         word = "latest";
     }
