@@ -17,8 +17,12 @@ var arrLog = "";
 /* function to write logs to Appengine logger*/
 //sample: writeLog("plinkData: " + plinkData);
 function writeLog(message) {
+    Call_ottoFuncLogger(message)
     arrLog += message + "\n";
     return;
+}
+function Call_ottoFuncLogger(msg) {
+    ottoFuncLogger(msg);
 }
 /*Parse the kvo input data to kvp*/
 var kvp = JSON.parse(kvo);
@@ -43,8 +47,8 @@ defNews = str.indexOf("news ");
 var numResult = 10;
 
 if (str == "news") {
-    var url = "https://www.bing.com/news/search?qs=n&qft=sortbydate%3d\"1\"&form=YFNR&q=" + "latest";
-    var resp = Call_ottoFuncScrapeWebsite(word, ".main-container .main .algocore .news-card .news-card-body .title", url, numResult);
+    var url = "https://www.bing.com/news/search?qs=n&qft=sortbydate%3d\"1\"&form=YFNR&q=news%20" + "latest";
+    var resp = Call_ottoFuncScrapeWebsite(word, ".main-container .main .news-card .news-card-body .caption", url, numResult);
     //var imgs = Call_ottoFuncScrapeWebsiteImages(word, ".main-container .main .algocore .news-card .news-card-body .image img .rms_img", url, numResult);
 
 } else if (defNews >= 0) {
@@ -55,14 +59,14 @@ if (str == "news") {
     if (word == undefined || word == "undefined") {
         word = "latest";
     }
-    var url = "https://www.bing.com/news/search?qs=n&qft=sortbydate%3d\"1\"&form=YFNR&q=" + word;
-    var resp = Call_ottoFuncScrapeWebsite(word, ".main-container .main .algocore .news-card .news-card-body .title", url, numResult);
+    var url = "https://www.bing.com/news/search?qs=n&qft=sortbydate%3d\"1\"&form=YFNR&q=news%20" + word;
+    var resp = Call_ottoFuncScrapeWebsite(word, ".main-container .main .news-card .news-card-body .caption", url, numResult);
     //var imgs = Call_ottoFuncScrapeWebsiteImages(word, ".main-container .main .algocore .news-card .news-card-body .image img .rms_img", url, numResult);
 
 } else {
     //output = "Sorry, I cant find news right now. Try example, news latest";
-    var url = "https://www.bing.com/news/search?qs=n&qft=sortbydate%3d\"1\"&form=YFNR&q=" + "latest";
-    var resp = Call_ottoFuncScrapeWebsite(word, ".main-container .main .algocore .news-card .news-card-body .title", url, numResult);
+    var url = "https://www.bing.com/news/search?qs=n&qft=sortbydate%3d\"1\"&form=YFNR&q=news%20" + "latest";
+    var resp = Call_ottoFuncScrapeWebsite(word, ".main-container .main .news-card .news-card-body .caption", url, numResult);
 }
 
 if (input === "") {

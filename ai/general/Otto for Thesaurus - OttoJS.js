@@ -26,9 +26,14 @@ var arrLog = "";
 /* function to write logs to Appengine logger*/
 //sample: writeLog("plinkData: " + plinkData);
 function writeLog(message) {
+    Call_ottoFuncLogger(message)
     arrLog += message + "\n";
     return;
 }
+function Call_ottoFuncLogger(msg) {
+    ottoFuncLogger(msg);
+}
+
 /*Parse the kvo input data to kvp*/
 var kvp = JSON.parse(kvo);
 /*By default output response must be saved in "output" object/var */
@@ -43,9 +48,28 @@ var ouc = kvp.ottoUserContext;
 /**
  * PROCESSING LOGIC 
  */
+var input = input.toLowerCase();
+input  = input.replace("?", "");
+writeLog("input: " + input);
+var str = input;
+writeLog("str: " + str);
+var syno = str.indexOf("synonyms ");
+var synoOf = str.indexOf("synonyms of");
+var synoFor = str.indexOf("synonyms for");
 
-var res = input.split(" ");
-var word = res[res.length - 1];
+var word = "";
+if (syno >= 0) {
+    var res = str.split("synonyms ");
+    word = res[res.length - 1];
+} else if (synoOf >= 0) {
+    var res = str.split("synonyms of ");
+    word = res[res.length - 1];
+} else if (synoFor >= 0) {
+    var res = str.split("synonyms for ");
+    word = res[res.length - 1];
+}
+//var res = input.split(" ");
+//var word = res[res.length - 1];
 if (word === "" || word === "synonyms") {
     output = "Sorry, you forgot to tell the word to be searched. Try as example: synonyms for virus";
 } else {

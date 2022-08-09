@@ -25,8 +25,12 @@ var arrLog = "";
 /* function to write logs to Appengine logger*/
 //sample: writeLog("plinkData: " + plinkData);
 function writeLog(message) {
+    Call_ottoFuncLogger(message)
     arrLog += message + "\n";
     return;
+}
+function Call_ottoFuncLogger(msg) {
+    ottoFuncLogger(msg);
 }
 /*Parse the kvo input data to kvp*/
 var kvp = JSON.parse(kvo);

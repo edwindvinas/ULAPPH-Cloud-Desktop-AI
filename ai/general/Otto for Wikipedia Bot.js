@@ -32,6 +32,7 @@ var arrLog = "";
 /* function to write logs to Appengine logger*/
 //sample: writeLog("plinkData: " + plinkData);
 function writeLog(message) {
+    Call_ottoFuncLogger(message)
     arrLog += message + "\n";
     return;
 }
@@ -49,17 +50,23 @@ var ouc = kvp.ottoUserContext;
 /**
  * PROCESSING LOGIC 
  */
+var input = input.toLowerCase();
+input  = input.replace("?", "");
 var str = input;
 writeLog("str: " + str);
 whatIs = str.indexOf("what is ");
-whoIs = str.indexOf("what is ");
+whatIsA = str.indexOf("what is a ");
+whatIsAn = str.indexOf("what is an ");
+whoIs = str.indexOf("who is ");
+whatIsThe = str.indexOf("what is the");
 wikiFor = str.indexOf("wiki for ");
 wikipediaFor = str.indexOf("wikipedia for ");
 wikipediaOnly = str.indexOf("wikipedia ");
 var wikiUrl = "";
 
-if (whatIs >= 0) {
-    var res = str.split("what is ");
+if (whatIsAn >= 0) {
+    writeLog("whatIsAn...")
+    var res = str.split("what is an ");
     var word = res[res.length - 1];
     writeLog("word: " + word);
     var mword = multipleWord(word);
@@ -77,7 +84,68 @@ if (whatIs >= 0) {
         var selector = ".mw-content-ltr div p";
         var bthres = Call_ottoFuncScrapeWebsite(word, selector, urlStr);
     }
+} else if (whatIsThe >= 0) {
+    writeLog("whatisThe...")
+    var res = str.split("what is the ");
+    var word = res[1];
+    writeLog("word: " + word);
+    var mword = multipleWord(word);
+    if (mword == "N") {
+        var urlStr = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + word;
+        var bthres = Call_ottoFuncHttpGet(urlStr);
+        wikiUrl = "https://en.wikipedia.org/wiki/" + word;
+    } else {
+        var tword = toTitleCase(res[1]);
+        //var resm = tword.split(" ");
+        //var wordj = resm.join("_");
+        //var replaced = tword.split(' ').join('_');
+        var urlStr = "https://en.wikipedia.org/wiki/" + tword;
+        wikiUrl = urlStr;
+        var selector = ".mw-content-ltr div p";
+        var bthres = Call_ottoFuncScrapeWebsite(word, selector, urlStr);
+    }
+} else if (whatIsA >= 0) {
+    writeLog("whatisA...")
+    var res = str.split("what is a ");
+    var word = res[1];
+    writeLog("word: " + word);
+    var mword = multipleWord(word);
+    if (mword == "N") {
+        var urlStr = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + word;
+        var bthres = Call_ottoFuncHttpGet(urlStr);
+        wikiUrl = "https://en.wikipedia.org/wiki/" + word;
+    } else {
+        var tword = toTitleCase(res[1]);
+        //var resm = tword.split(" ");
+        //var wordj = resm.join("_");
+        //var replaced = tword.split(' ').join('_');
+        var urlStr = "https://en.wikipedia.org/wiki/" + tword;
+        wikiUrl = urlStr;
+        var selector = ".mw-content-ltr div p";
+        var bthres = Call_ottoFuncScrapeWebsite(word, selector, urlStr);
+    }
+} else if (whatIs >= 0) {
+    writeLog("whatis...")
+    var res = str.split("what is ");
+    var word = res[1];
+    writeLog("word: " + word);
+    var mword = multipleWord(word);
+    if (mword == "N") {
+        var urlStr = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=" + word;
+        var bthres = Call_ottoFuncHttpGet(urlStr);
+        wikiUrl = "https://en.wikipedia.org/wiki/" + word;
+    } else {
+        var tword = toTitleCase(res[1]);
+        //var resm = tword.split(" ");
+        //var wordj = resm.join("_");
+        //var replaced = tword.split(' ').join('_');
+        var urlStr = "https://en.wikipedia.org/wiki/" + tword;
+        wikiUrl = urlStr;
+        var selector = ".mw-content-ltr div p";
+        var bthres = Call_ottoFuncScrapeWebsite(word, selector, urlStr);
+    }
 } else if (whoIs >= 0) {
+    writeLog("whois...")
     var res = str.split("who is ");
     var word = res[res.length - 1];
     writeLog("word: " + word);
@@ -97,6 +165,7 @@ if (whatIs >= 0) {
         var bthres = Call_ottoFuncScrapeWebsite(word, selector, urlStr);
     }
 } else if (wikiFor >= 0) {
+    writeLog("wikiFor...")
     var res = str.split("wiki for ");
     var word = res[res.length - 1];
     writeLog("word: " + word);
@@ -116,6 +185,7 @@ if (whatIs >= 0) {
         var bthres = Call_ottoFuncScrapeWebsite(word, selector, urlStr);
     }
 } else if (wikipediaFor >= 0) {
+    writeLog("wikipediaFor...")
     var res = str.split("wikipedia for ");
     var word = res[res.length - 1];
     writeLog("word: " + word);
@@ -135,8 +205,10 @@ if (whatIs >= 0) {
         var bthres = Call_ottoFuncScrapeWebsite(word, selector, urlStr);
     }
 } else if (wikipediaOnly >= 0) {
+    writeLog("wikipediaOnly...")
     var res = str.split("wikipedia ");
-    var word = res[res.length - 1];
+    //var word = res[res.length - 1];
+    var word = res[1];
     writeLog("word: " + word);
     var mword = multipleWord(word);
     if (mword == "N") {
@@ -185,6 +257,9 @@ function multipleWord(words) {
     }
 }
 
+function Call_ottoFuncLogger(msg) {
+    ottoFuncLogger(msg);
+}
 function Call_ottoFuncHttpGet(urlStr) {
     writeLog("Calling API: " + urlStr);
     var apires = ottoFuncHttpGet(urlStr);

@@ -17,6 +17,7 @@ var arrLog = "";
 /* function to write logs to Appengine logger*/
 //sample: writeLog("plinkData: " + plinkData);
 function writeLog(message) {
+    Call_ottoFuncLogger(message)
     arrLog += message + "\n";
     return;
 }
@@ -38,22 +39,26 @@ var str = input;
 writeLog("str: " + str);
 if (str == "quote of the day") {
     var url = "https://www.brainyquote.com/quote_of_the_day";
-    var resp = Call_ottoFuncScrapeWebsite("", ".container .row .qotd-q-cntr .qll-bg .clearfix", url, 1);    
+    var resp = Call_ottoFuncScrapeWebsiteRandom("", ".qotd_days .qotd-q-cntr div .clearfix", url, 5);    
 } else {
 	var rNum = randomIntFromInterval(2,18);
 	var ranURL = "https://www.brainyquote.com/topics/inspirational-quotes_"+rNum;
     //var url = "https://www.brainyquote.com/topics/inspirational-quotes";
-    var resp = Call_ottoFuncScrapeWebsite("", ".bq_center .new-msnry-grid .qll-bg", ranURL, 1);      
+    var resp = Call_ottoFuncScrapeWebsiteRandom("", ".bq_center .grid-item .b-qt", ranURL, 5);      
 }
 if (input === "") {
     output = "";
 }
+function Call_ottoFuncLogger(msg) {
+    ottoFuncLogger(msg);
+}
+
 function randomIntFromInterval(min, max) { // min and max included 
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-function Call_ottoFuncScrapeWebsite(word, selector, urlStr, num) {
+function Call_ottoFuncScrapeWebsiteRandom(word, selector, urlStr, num) {
     writeLog("Calling API: " + urlStr);
-    var apires = ottoFuncScrapeWebsite(selector, urlStr, num);
+    var apires = ottoFuncScrapeWebsiteRandom(selector, urlStr, num);
     if (apires !== "") {
         //output = "According to Brainy Quotes... <silence msec='1000'/>" + apires;
         //output += "UWM_ACTION::OPENTAB::" + urlStr + "::";
