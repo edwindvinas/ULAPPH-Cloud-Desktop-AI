@@ -97,7 +97,7 @@ if (bible >= 0) {
     //var spl = str.indexOf("youtube ");
     var spl = str.split("play ");
     if (spl.length > 1) {
-        output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/results?sp=CAMSAhAD&search_query=" + escape(spl[1]);
+        output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/results?sp=EgIIAg%253D%253D&search_query=" + escape(spl[1]);
     } else {
         //output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/embed/k_CadeboRRs?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&autoplay=0";
         output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com";
@@ -114,7 +114,7 @@ if (bible >= 0) {
         } else if (spl[1] == "music") {
             output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/embed/videoseries?list=PLLMA7Sh3JsOQQFAtj1no-_keicrqjEZDm&rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&autoplay=0";
         } else {
-            output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/results?sp=CAMSAhAD&search_query=" + escape(spl[1]);
+            output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/results?sp=EgIIAg%253D%253D&search_query=" + escape(spl[1]);
         }
     } else {
         //output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/embed/k_CadeboRRs?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&autoplay=0";
@@ -196,7 +196,7 @@ if (bible >= 0) {
         } else if (tString.indexOf("twist and shout") >= 0) {
             output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/embed/81ZtmBAA_NE?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&autoplay=0";
 		} else {
-            output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/results?sp=CAMSAhAD&search_query=" + escape(spl[1]);
+            output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/results?sp=EgIIAg%253D%253D&search_query=" + escape(spl[1]);
         }
     } else {
         //output = "UWM_ACTION::OPENWINDOW::" + "https://www.youtube.com/embed/k_CadeboRRs?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=1&autoplay=0";
