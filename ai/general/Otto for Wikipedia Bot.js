@@ -228,10 +228,12 @@ if (whatIsAn >= 0) {
 } else {
     if (str == "wikipedia") {
         output = "Sorry, you forgot to tell the target keyword. For example: wikipedia planet";
-		output += "UWM_ACTION::OPENWINDOW::" + "https://www.wikipedia.org/" + "::";
+		//output += "UWM_ACTION::OPENWINDOW::" + "https://www.wikipedia.org/" + "::";
+		output += "UWM_ACTION::OPENWINDOW::" + "https://www.wikipedia.org/";
     } else {
         output = "Sorry, I cant find " + word + " in Wikipedia.";
-		output += "UWM_ACTION::OPENWINDOW::" + "https://www.wikipedia.org/" + "::";
+		//output += "UWM_ACTION::OPENWINDOW::" + "https://www.wikipedia.org/" + "::";
+		output += "UWM_ACTION::OPENWINDOW::" + "https://www.wikipedia.org/";
     }
 }
 
@@ -275,7 +277,8 @@ function Call_ottoFuncHttpGet(urlStr) {
             var extract = wikiobj[thisKey].extract;
             output = "According to wikipedia... " + extract;
             //output += "UWM_ACTION::OPENWINDOW::" + wikiUrl + "::";
-            output += "UWM_ACTION::OPENTAB::" + wikiUrl + "::";
+            //output += "UWM_ACTION::OPENTAB::" + wikiUrl + "::";
+            output += "UWM_ACTION::OPENTAB::" + wikiUrl;
             //var fText = extract.substring(1, 300);
             //var openLink = "https://localhost/editor?EDIT_FUNC=TEXT-CSS&CSS-TYPE=.3d&CSS-ALIGN=center&EDIT_MODE=NEW-CSS&TEXT=" + escape(fText);
             //output += "UWM_ACTION::OPENWINDOW::" + openLink + "::";
@@ -294,14 +297,16 @@ function Call_ottoFuncScrapeWebsite(word, selector, urlStr) {
     if (apires !== "") {
         output = "According to wikipedia... " + apires;
         //output += "UWM_ACTION::OPENWINDOW::" + wikiUrl + "::";
-        output += "UWM_ACTION::OPENTAB::" + wikiUrl + "::";
+        //output += "UWM_ACTION::OPENTAB::" + wikiUrl + "::";
+        output += "UWM_ACTION::OPENTAB::" + wikiUrl;
         //var fText = apires.substring(1, 300);
         //var openLink = "https://localhost/editor?EDIT_FUNC=TEXT-CSS&CSS-TYPE=.3d&CSS-ALIGN=center&EDIT_MODE=NEW-CSS&TEXT=" + escape(fText);
         //output += "UWM_ACTION::OPENWINDOW::" + openLink + "::";
     } else {
         output = "Sorry, I cant find " + word + " in Wikipedia.";
 		wikiUrl = "https://www.google.com?q="+word;
-		output += "UWM_ACTION::OPENWINDOW::" + wikiUrl + "::";
+		//output += "UWM_ACTION::OPENWINDOW::" + wikiUrl + "::";
+		output += "UWM_ACTION::OPENWINDOW::" + wikiUrl;
     }
 }
 

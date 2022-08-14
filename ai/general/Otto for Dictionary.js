@@ -92,10 +92,12 @@ if (defTask >= 0) {
     if (str == "dictionary" || str == "define") {
         output = "Sorry, you forgot to tell the term to be searched. Try example, dictionary virus.";
 		var mwurl = "https://www.merriam-webster.com/dictionary/";
-		output += "UWM_ACTION::OPENWINDOW::" + mwurl + "::";
+		//output += "UWM_ACTION::OPENWINDOW::" + mwurl + "::";
+		output += "UWM_ACTION::OPENWINDOW::" + mwurl;
     } else {
         output = "Sorry, I cant find " + word + " in Dictionary.";
-		output += "UWM_ACTION::OPENWINDOW::" + "https://www.merriam-webster.com/dictionary/" + "::";
+		//output += "UWM_ACTION::OPENWINDOW::" + "https://www.merriam-webster.com/dictionary/" + "::";
+		output += "UWM_ACTION::OPENWINDOW::" + "https://www.merriam-webster.com/dictionary/";
     }
 }
 

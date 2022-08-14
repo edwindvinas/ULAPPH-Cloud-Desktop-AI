@@ -1,6 +1,14 @@
 /*DESCRIPTION:
- * Gets quotes from brainy quotes
-/*NAME: Quotations Bot
+ * Handles Termux intents
+ * {
+ *   "noun": {
+ *       "syn": ["adult female", "charwoman", "char", "cleaning woman", "cleaning lady", "womanhood", "fair sex", "adult", "class", "cleaner", "female", "female person", "grownup", "social class", "socio-economic class"],
+ *       "ant": ["man"],
+ *       "usr": ["girl"]
+ *   }
+ * }
+ */
+/*NAME: Termux - Call Bot
     
     INPUT:
     { "input": ?, "kvo": ?}  
@@ -21,6 +29,10 @@ function writeLog(message) {
     arrLog += message + "\n";
     return;
 }
+function Call_ottoFuncLogger(msg) {
+    ottoFuncLogger(msg);
+}
+
 /*Parse the kvo input data to kvp*/
 var kvp = JSON.parse(kvo);
 /*By default output response must be saved in "output" object/var */
@@ -35,41 +47,40 @@ var ouc = kvp.ottoUserContext;
 /**
  * PROCESSING LOGIC 
  */
+
+//termux_call_contact :: call Edwin
+
+writeLog("kvp data: " + JSON.stringify(kvp));
 var str = input;
-writeLog("str: " + str);
-if (str == "quote of the day") {
-    var url = "https://www.brainyquote.com/quote_of_the_day";
-    var resp = Call_ottoFuncScrapeWebsiteRandom("", ".qotd_days .qotd-q-cntr div .clearfix", url, 5);    
-} else {
-	var rNum = randomIntFromInterval(2,18);
-	var ranURL = "https://www.brainyquote.com/topics/inspirational-quotes_"+rNum;
-    //var url = "https://www.brainyquote.com/topics/inspirational-quotes";
-    var resp = Call_ottoFuncScrapeWebsiteRandom("", ".bq_center .grid-item .b-qt", ranURL, 5);      
-}
-if (input === "") {
-    output = "";
-}
-function Call_ottoFuncLogger(msg) {
-    ottoFuncLogger(msg);
+writeLog("str: "+str);
+//split
+//termux_call_contact::09296871234::Mom
+var myArray = str.split("::");
+var intent = myArray[0];
+var phoneNumber = myArray[1];
+var contactName = myArray[2];
+writeLog("intent: "+intent);
+writeLog("phoneNumber: "+phoneNumber);
+writeLog("contactName: "+contactName);
+
+if (intent == "termux_call_contact") {
+    var apires = Call_ottoFuncTermux_SearchContacts(phoneNumber, contactName)
 }
 
-function randomIntFromInterval(min, max) { // min and max included 
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-function Call_ottoFuncScrapeWebsiteRandom(word, selector, urlStr, num) {
-    writeLog("Calling API: " + urlStr);
-    var apires = ottoFuncScrapeWebsiteRandom(selector, urlStr, num);
-    if (apires !== "") {
-        //output = "According to Brainy Quotes... <silence msec='1000'/>" + apires;
-        //output += "UWM_ACTION::OPENTAB::" + urlStr + "::";
-        output = apires;
-        var openLink = "/editor?EDIT_FUNC=TEXT-CSS&CSS-TYPE=.3d&CSS-ALIGN=center&EDIT_MODE=NEW-CSS&TEXT=" + escape(apires);
-        //output += "UWM_ACTION::OPENWINDOW::" + openLink + "::";
-        output += "UWM_ACTION::OPENWINDOW::" + openLink;
+function Call_ottoFuncTermux_SearchContacts(phoneNumber, contactName) {
+    writeLog("Calling API: " + "Call_ottoFuncTermux_SearchContacts");
+    apires = ottoFuncTermux_SearchContacts(phoneNumber, contactName);
+    writeLog("apires: "+apires);
+    if (apires !== "" && apires !== "err_multi" && apires !== "err_unknown") {
+        output += "You are about to call number: "+apires;
+        output += "UWM_ACTION::CALL_CONTACT::" + apires;
     } else {
-        output = "Sorry, I cant find a quotation from Brainy Quotes.";
+        output += "Sorry, I can't find the contact number." + "\n";
+        output += "Make sure your contacts have unique names or indentifiers.";
     }
 }
+// code block
+
 //!!! EDIT ABOVE THIS LINE !!!!!!!!!!!!!!!///
 /* Dont remove */
 /*------------------------------------*/
@@ -91,5 +102,6 @@ if (apires !== "") {
 //Print debug logs in the Appengine logger
 writeLog("OUTPUT: " + output);
 writeLog("KVO: " + kvo);
+writeLog("kvo.ottoFillerStr1: " + kvo.ottoFillerStr1);
 writeLog("LOG: " + log);
 /*------------------------------------*/
